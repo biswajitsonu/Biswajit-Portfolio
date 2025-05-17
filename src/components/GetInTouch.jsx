@@ -7,7 +7,7 @@ function GetInTouch() {
       <div className="max-w-full w-full flex-grow">
         <div className="max-w-full w-full">
           <h1 className="font-extrabold text-2xl text-center mb-3">Get In Touch</h1>
-          <p
+          {/* <p
             className="text-gray-400 mb-10"
             style={{
               maxWidth: "60rem",
@@ -23,7 +23,7 @@ function GetInTouch() {
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br />
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+          </p> */}
           <form className="space-y-5 mx-auto" style={{ maxWidth: "20rem" }}>
             <div>
               <label htmlFor="email" className="block text-xs font-bold mb-1">
