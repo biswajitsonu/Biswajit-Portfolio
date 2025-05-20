@@ -9,7 +9,7 @@ function ProfileSection() {
   };
 
   return (
-    <section id="home" className="bg-black min-h-screen">
+    <section id="home" className="bg-black min-h-screen pt-20">
       <nav className="bg-gray-900 flex justify-center space-x-10 py-4 text-lg max-w-7xl mx-auto px-6 overflow-hidden whitespace-nowrap fixed top-0 left-0 right-0 z-50">
         <a
           href="#home"
@@ -72,7 +72,7 @@ function ProfileSection() {
         </div>
       </nav>
 
-      <main className="bg-black mx-auto px-6 py-16 flex flex-col md:flex-row items-center md:items-start gap-16 max-w-5xl mt-[72px]">
+      <main className="bg-black mx-auto px-6 py-16 flex flex-col md:flex-row items-center md:items-start gap-16 max-w-5xl">
         <section className="flex-1 max-w-lg md:max-w-md" style={{ marginTop: 0 }}>
           <h1 className="text-white text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
             Biswajit Sahoo
