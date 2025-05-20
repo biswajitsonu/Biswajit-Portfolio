@@ -3,7 +3,7 @@ import { FaHeart } from "react-icons/fa";
 
 function GetInTouch() {
   return (
-    <main className="bg-black text-white min-h-screen flex flex-col justify-between px-4">
+    <main id="get-in-touch" className="bg-black text-white min-h-screen flex flex-col justify-between px-4">
       <div className="max-w-full w-full flex-grow">
         <div className="max-w-full w-full">
           <h1 className="font-extrabold text-2xl text-center mb-3">Get In Touch</h1>

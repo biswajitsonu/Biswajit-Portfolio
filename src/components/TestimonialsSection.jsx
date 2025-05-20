@@ -3,6 +3,7 @@ import React from "react";
 function TestimonialsSection() {
   return (
     <section
+      id="testimonials"
       className="bg-gray-900 text-white w-full"
       style={{ margin: "0", paddingTop: "6rem", paddingBottom: "6rem", width: "100%" }}
     >

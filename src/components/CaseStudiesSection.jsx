@@ -2,7 +2,7 @@ import React from "react";
 
 function CaseStudiesSection() {
   return (
-    <section className="bg-white text-black px-6 py-10 max-w-7xl mx-auto">
+    <section id="case-studies" className="bg-white text-black w-full px-6 py-10">
       <section className="text-center max-w-3xl mx-auto mb-20">
         <h2 className="font-extrabold text-2xl md:text-3xl">Case Studies</h2>
         <p className="mt-3 text-sm md:text-base leading-relaxed text-gray-600">
@@ -34,7 +34,7 @@ function CaseStudiesSection() {
         <div>
           <img
             alt="Workspace with UX Store design sketches, keyboard, pens, and orange tools on a desk"
-            className="w-full max-w-[892px] h-[400px]"
+            className="max-w-full h-auto object-cover rounded-lg shadow-lg"
             height="400"
             src="https://i.postimg.cc/pLZc9hdy/Mask-group.png"
             width="892"
@@ -45,7 +45,7 @@ function CaseStudiesSection() {
         <div className="order-2 md:order-1">
           <img
             alt="Tablet showing color swatches and design sketches on a desk with computer and mouse"
-            className="w-full max-w-[892px] h-[400px]"
+            className="max-w-full h-auto object-cover rounded-lg shadow-lg"
             height="400"
             src="https://i.postimg.cc/MThB5SDg/Mask-group-1.png"
             width="892"
@@ -98,7 +98,7 @@ function CaseStudiesSection() {
         <div>
           <img
             alt="Computer screen showing UI design components and templates with green plant in foreground"
-            className="w-full max-w-[892px] h-[400px]"
+            className="max-w-full h-auto object-cover rounded-lg shadow-lg"
             height="400"
             src="https://i.postimg.cc/x1xcgQjg/Mask-group-2.png"
             width="892"
