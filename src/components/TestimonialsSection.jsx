@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function TestimonialsSection() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const section = document.getElementById("testimonials");
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.85) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      }
+    };
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <section
       id="testimonials"
-      className="bg-gray-900 text-white w-full"
+      className={`bg-gray-900 text-white w-full transition-opacity duration-700 ease-out ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
       style={{ margin: "0", paddingTop: "6rem", paddingBottom: "6rem", width: "100%" }}
     >
       <section className="max-w-7xl mx-auto px-6 py-16">

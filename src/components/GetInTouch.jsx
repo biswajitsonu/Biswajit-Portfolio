@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaHeart } from "react-icons/fa";
 
 function GetInTouch() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const section = document.getElementById("get-in-touch");
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.85) {
+          setIsVisible(true);
+        }
+      }
+    };
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <main id="get-in-touch" className="bg-black text-white min-h-screen flex flex-col justify-between px-4">
+    <main
+      id="get-in-touch"
+      className={`bg-black text-white min-h-screen flex flex-col justify-between px-4 pt-24 transition-opacity duration-700 ease-out ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
+    >
       <div className="max-w-full w-full flex-grow">
         <div className="max-w-full w-full">
           <h1 className="font-extrabold text-2xl text-center mb-3">Get In Touch</h1>
@@ -61,13 +83,13 @@ function GetInTouch() {
                 style={{ height: "7.5rem" }}
               ></textarea>
             </div>
-              <button
-                type="submit"
-                className="w-full font-bold text-xs rounded-md transition-shadow shadow-[0_10px_15px_rgba(44,128,0,0.6)]"
-                style={{ backgroundColor: "#3F8E00", paddingTop: "1rem", paddingBottom: "1rem" }}
-              >
-                Submit {'>'}
-              </button>
+            <button
+              type="submit"
+              className="w-full font-bold text-xs rounded-md transition-shadow shadow-[0_10px_15px_rgba(44,128,0,0.6)]"
+              style={{ backgroundColor: "#3F8E00", paddingTop: "1rem", paddingBottom: "1rem" }}
+            >
+              Submit {'>'}
+            </button>
           </form>
         </div>
       </div>
